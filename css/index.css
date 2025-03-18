@@ -1,6 +1,6 @@
 body {
-  font-family: 'Roboto-Mono', monospace;
-  background-color: #ffffff;
+  font-family: Roboto-Mono, monospace;
+  background-color: #fff;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -15,7 +15,7 @@ body {
 
 .logo {
   font-size: 60px;
-  font-family: 'Courgette', cursive;
+  font-family: Courgette, cursive;
   margin-bottom: 50px;
 }
 
@@ -29,10 +29,10 @@ body {
 
 .caption-description {
   font-size: 14.5px;
-  color: #000000;
+  color: #000;
   margin-bottom: 30px;
   line-height: 1.6;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 40px;
 }
 
 .start-btn {
@@ -43,7 +43,7 @@ body {
   font-size: 14px;
   border-radius: 5px;
   cursor: pointer;
-  font-family: 'Roboto-Mono', monospace;
+  font-family: Roboto-Mono, monospace;
 }
 
 .start-btn:hover {
