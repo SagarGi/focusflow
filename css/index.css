@@ -20,7 +20,7 @@ body {
 }
 
 .focus {
-  color: black;
+  color: #000;
 }
 
 .flow {
@@ -30,14 +30,13 @@ body {
 .caption-description {
   font-size: 14.5px;
   color: #000;
-  margin-bottom: 30px;
   line-height: 1.6;
   margin: 0 auto 40px;
 }
 
 .start-btn {
   background-color: #38a8db;
-  color: white;
+  color: #fff;
   border: none;
   padding: 18px 25px;
   font-size: 14px;

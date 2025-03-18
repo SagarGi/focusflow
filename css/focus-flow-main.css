@@ -27,7 +27,7 @@ header {
 .focus,
 .help {
   font-family: Courgette, cursive;
-  color: black;
+  color: #000;
 }
 
 .flow,
@@ -64,8 +64,8 @@ header {
 }
 
 .subject:hover {
-  background-color: black;
-  color: white;
+  background-color: #000;
+  color: #fff;
 }
 
 .add-subject-container {
@@ -81,7 +81,7 @@ header {
   justify-content: center;
   gap: 10px;
   background-color: #38a8db;
-  color: white;
+  color: #fff;
   border: none;
   padding: 15px;
   font-size: 12.5px;
@@ -97,7 +97,7 @@ header {
 
 .next-btn {
   background-color: #38a8db;
-  color: white;
+  color: #fff;
   border: none;
   padding: 12px 60px;
   font-size: 16px;
