@@ -1,5 +1,11 @@
-export function toogleSubject(button) {
+import { getNoOfChildren } from '../js/helper/helper.js';
+
+export function selectOrDisselectSubjects(node) {
   const instructionBoxSubjects = document.querySelector('.instruction-box-subjects');
+  if (node.classList.contains('subject') && getNoOfChildren(instructionBoxSubjects) >= 5) {
+    alert('You can only select a maximum of 5 subjects.');
+    return;
+  }
   const subjectsContainer = document.querySelector('.subject-container');
   const subjectDescriptionPlaceholder = document.querySelector('.subject-description-placeholder');
 
@@ -8,17 +14,17 @@ export function toogleSubject(button) {
     return;
   }
 
-  if (button.classList.contains('subject')) {
-    button.classList.replace('subject', 'subject-selected');
-    instructionBoxSubjects.appendChild(button);
-  } else if (button.classList.contains('subject-selected')) {
-    button.classList.replace('subject-selected', 'subject');
-    subjectsContainer.appendChild(button);
+  if (node.classList.contains('subject')) {
+    node.classList.replace('subject', 'subject-selected');
+    instructionBoxSubjects.appendChild(node);
+  } else if (node.classList.contains('subject-selected')) {
+    node.classList.replace('subject-selected', 'subject');
+    subjectsContainer.appendChild(node);
   }
 
   // Toggle subject description display
   subjectDescriptionPlaceholder.style.display =
-    instructionBoxSubjects.children.length === 0 ? 'block' : 'none';
+    getNoOfChildren(instructionBoxSubjects) === 0 ? 'block' : 'none';
 }
 
-window.toogleSubject = toogleSubject;
+window.selectOrDisselectSubjects = selectOrDisselectSubjects;
