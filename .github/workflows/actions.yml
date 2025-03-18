@@ -21,3 +21,12 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: style lint check
+        run: npm run style:lint:check
+
+      - name: code format check
+        run: npm run format:check
+
+      - name: javascript lint check
+        run: npm run lint:js

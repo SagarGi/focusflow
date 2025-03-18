@@ -7,9 +7,10 @@
     "test-unit": "",
     "test-e2e": "",
     "lint:js": "eslint **/*.js",
-    "lint:css": "stylelint **/*.css",
-    "lint:css:fix": "stylelint '**/*.css' --fix",
-    "prettier:format": "prettier --write ."
+    "style:lint:check": "stylelint **/*.css",
+    "style:lint:fix": "stylelint '**/*.css' --fix",
+    "format:check": "prettier --check .",
+    "format:fix": "prettier --write ."
   },
   "keywords": [],
   "author": "",
