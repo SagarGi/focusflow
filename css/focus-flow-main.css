@@ -10,7 +10,7 @@ body {
 }
 
 .wrapper {
-  max-width: 80%;
+  width: 50%;
 }
 
 header {
@@ -21,7 +21,7 @@ header {
   padding: 10px;
   font-size: 20px;
   max-height: 60px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .focus,
@@ -37,6 +37,9 @@ header {
 }
 
 .instruction-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #e7e7e7;
   margin-bottom: 30px;
   color: #757575;
@@ -45,6 +48,7 @@ header {
   max-height: 150px;
   height: 150px;
   padding: 0.5px 15px 0;
+  border-radius: 5px;
 }
 
 .subject-container {
@@ -54,7 +58,8 @@ header {
   margin-bottom: 20px;
 }
 
-.subject {
+.subject,
+.subject-selected {
   padding: 10px;
   border: 1px solid rgb(32 32 32);
   background: none;
@@ -63,9 +68,19 @@ header {
   font-size: 14px;
 }
 
-.subject:hover {
-  background-color: #000;
+.subject-selected {
+  margin: 10px;
+}
+
+.subject-selected:hover {
+  background-color: rgb(194 0 32);
   color: #fff;
+}
+
+.subject:hover {
+  background-color: #38a8db;
+  color: #fff;
+  border: 1px solid #41c3ff;
 }
 
 .add-subject-container {
