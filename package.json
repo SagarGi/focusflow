@@ -1,0 +1,24 @@
+{
+  "name": "aset-scrum",
+  "version": "1.0.0",
+  "description": "This is a simple project done as a part of college assesment by the student of University of West London in order to understnd Agile Scrum Methodology.",
+  "main": "index.js",
+  "scripts": {
+    "test-unit": "",
+    "test-e2e": "",
+    "lint:js": "eslint **/*.js",
+    "lint:css": "stylelint **/*.css",
+    "lint:css:fix": "stylelint '**/*.css' --fix",
+    "prettier:format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^9.22.0",
+    "prettier": "^3.5.3",
+    "stylelint": "^16.16.0",
+    "stylelint-config-recommended": "^15.0.0",
+    "stylelint-config-standard": "^37.0.0"
+  }
+}

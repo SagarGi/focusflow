@@ -1,0 +1,51 @@
+body {
+  font-family: 'Roboto-Mono', monospace;
+  background-color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  max-width: 600px;
+}
+
+.logo {
+  font-size: 60px;
+  font-family: 'Courgette', cursive;
+  margin-bottom: 50px;
+}
+
+.focus {
+  color: black;
+}
+
+.flow {
+  color: #38a8db;
+}
+
+.caption-description {
+  font-size: 14.5px;
+  color: #000000;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  margin: 0 auto 40px auto;
+}
+
+.start-btn {
+  background-color: #38a8db;
+  color: white;
+  border: none;
+  padding: 18px 25px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Roboto-Mono', monospace;
+}
+
+.start-btn:hover {
+  background-color: #2a87b9;
+}
