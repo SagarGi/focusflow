@@ -7,24 +7,25 @@ Made with ❤️ using vanilla js, html and css.
 
 1. Clone the project
 
-    ```bash
-    https://github.com/SagarGi/focusflow.git
-    cd focusflow
-    ```
+   ```bash
+   https://github.com/SagarGi/focusflow.git
+   cd focusflow
+   ```
 
 2. Install dependencies
-    > Note: Node version 18 or above is required
 
-    ```bash
-    npm install
-    ```
+   > Note: Node version 18 or above is required
+
+   ```bash
+   npm install
+   ```
 
 3. View the project locally on:
 
-    > If your are using vs code live server extension (reccomended)
+   > If your are using vs code live server extension (reccomended)
 
-    ```bash
-    http://localhost:5500/index.html
-    ```
+   ```bash
+   http://localhost:5500/index.html
+   ```
 
-    > else open with google chrome or any other web browser
+   > else open with google chrome or any other web browser
