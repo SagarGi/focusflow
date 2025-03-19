@@ -1,9 +1,14 @@
 import { getNoOfChildren } from '../js/helper/helper.js';
+import {
+  subjectErrorEmpty,
+  subjectErrorLong,
+  validationSubjectExceed,
+} from '../js/helper/constant.js';
 
 export function selectOrDisselectSubjects(node, type = null) {
   const instructionBoxSubjects = document.querySelector('.instruction-box-subjects');
   if (node.classList.contains('subject') && getNoOfChildren(instructionBoxSubjects) >= 5) {
-    alert('You can only select a maximum of 5 subjects.');
+    alert(validationSubjectExceed);
     return;
   }
   const subjectsContainer = document.querySelector('.subject-container');
@@ -46,12 +51,12 @@ export function addCustomSubject() {
   const subjectError = document.getElementById('subject-error');
   // check for the validation if there is no subject name or subject name is too long
   if (subjectName === '') {
-    subjectError.textContent = 'Subject name cannot be empty';
+    subjectError.textContent = subjectErrorEmpty;
     subjectError.style.display = 'block';
     return;
   }
   if (subjectName.length > 20) {
-    subjectError.textContent = 'Subject name is too long';
+    subjectError.textContent = subjectErrorLong;
     subjectError.style.display = 'block';
     return;
   }
