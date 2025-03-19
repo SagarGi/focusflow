@@ -27,4 +27,14 @@ export function selectOrDisselectSubjects(node) {
     getNoOfChildren(instructionBoxSubjects) === 0 ? 'block' : 'none';
 }
 
+export function showAddSubjectDialog() {
+  document.getElementById('dialogOverlay').style.display = 'flex';
+}
+
+export function closeAddSubjectDialog() {
+  document.getElementById('dialogOverlay').style.display = 'none';
+}
+
 window.selectOrDisselectSubjects = selectOrDisselectSubjects;
+window.showAddSubjectDialog = showAddSubjectDialog;
+window.closeAddSubjectDialog = closeAddSubjectDialog;
