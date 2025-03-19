@@ -13,7 +13,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <link rel="stylesheet" href="../css/focus-flow-main.css" />
-    <script type="module" src="../js/main.js" defer></script>
+    <script type="module" src="../js/main.js" defer>
+      import { selectOrDisselectSubjects, showAddSubjectDialog, closeAddSubjectDialog } from '../js/helper/helper.js';
+      window.selectOrDisselectSubjects = selectOrDisselectSubjects;
+      window.showAddSubjectDialog = showAddSubjectDialog;
+      window.closeAddSubjectDialog = closeAddSubjectDialog;
+    </script>
   </head>
   <body>
     <div class="wrapper">
@@ -40,7 +45,18 @@
         <button class="subject" onclick="selectOrDisselectSubjects(this)">Account</button>
       </div>
       <div class="add-subject-container">
-        <button class="add-subject-btn"><i class="fa-solid fa-plus"></i> Add subject</button>
+        <button class="add-subject-btn" onclick="showAddSubjectDialog()">
+          <i class="fa-solid fa-plus"></i> Add subject
+        </button>
+        <div id="dialogOverlay" class="dialog-overlay">
+          <div class="dialog-box">
+            <input type="text" id="subjectInput" placeholder="Enter subject name" />
+            <div class="dialog-buttons">
+              <button id="cancel-btn" onclick="closeAddSubjectDialog()">Cancel</button>
+              <button id="add-btn">Add</button>
+            </div>
+          </div>
+        </div>
       </div>
       <p class="begin-text">Let’s begin!</p>
       <button class="next-btn"><i class="fa-solid fa-arrow-right"></i></button>
