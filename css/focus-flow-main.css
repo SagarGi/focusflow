@@ -172,7 +172,7 @@ header {
 }
 
 #subject-error {
-  color: red;
+  color: rgb(255 21 21);
   font-size: 12px;
   margin-top: 5px;
   display: none;
