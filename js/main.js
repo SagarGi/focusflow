@@ -1,6 +1,6 @@
 import { getNoOfChildren } from '../js/helper/helper.js';
 
-export function selectOrDisselectSubjects(node) {
+export function selectOrDisselectSubjects(node, type = null) {
   const instructionBoxSubjects = document.querySelector('.instruction-box-subjects');
   if (node.classList.contains('subject') && getNoOfChildren(instructionBoxSubjects) >= 5) {
     alert('You can only select a maximum of 5 subjects.');
@@ -18,8 +18,12 @@ export function selectOrDisselectSubjects(node) {
     node.classList.replace('subject', 'subject-selected');
     instructionBoxSubjects.appendChild(node);
   } else if (node.classList.contains('subject-selected')) {
-    node.classList.replace('subject-selected', 'subject');
-    subjectsContainer.appendChild(node);
+    if (type === 'custom') {
+      node.remove();
+    } else {
+      node.classList.replace('subject-selected', 'subject');
+      subjectsContainer.appendChild(node);
+    }
   }
 
   // Toggle subject description display
@@ -32,9 +36,38 @@ export function showAddSubjectDialog() {
 }
 
 export function closeAddSubjectDialog() {
+  document.getElementById('subjectInput').value = '';
+  document.getElementById('subject-error').style.display = 'none';
   document.getElementById('dialogOverlay').style.display = 'none';
+}
+
+export function addCustomSubject() {
+  const subjectName = document.getElementById('subjectInput').value.trim();
+  const subjectError = document.getElementById('subject-error');
+  // check for the validation if there is no subject name or subject name is too long
+  if (subjectName === '') {
+    subjectError.textContent = 'Subject name cannot be empty';
+    subjectError.style.display = 'block';
+    return;
+  }
+  if (subjectName.length > 20) {
+    subjectError.textContent = 'Subject name is too long';
+    subjectError.style.display = 'block';
+    return;
+  }
+
+  // if there is no error then we add the new custom subject to the list
+  // create a new button node
+  const newButton = document.createElement('button');
+  newButton.classList.add('subject');
+  newButton.textContent = subjectName;
+  newButton.setAttribute('onclick', 'selectOrDisselectSubjects(this, "custom")');
+  // add it to the list
+  selectOrDisselectSubjects(newButton, 'custom');
+  closeAddSubjectDialog();
 }
 
 window.selectOrDisselectSubjects = selectOrDisselectSubjects;
 window.showAddSubjectDialog = showAddSubjectDialog;
 window.closeAddSubjectDialog = closeAddSubjectDialog;
+window.addCustomSubject = addCustomSubject;

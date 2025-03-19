@@ -140,6 +140,11 @@ header {
   border-radius: 5px;
 }
 
+.input-and-error {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Buttons */
 .dialog-buttons {
   display: flex;
@@ -164,6 +169,13 @@ header {
   width: 49%;
   background: #38a8db;
   color: #fff;
+}
+
+#subject-error {
+  color: rgb(255 21 21);
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
 }
 
 .begin-text {

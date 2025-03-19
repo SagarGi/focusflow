@@ -50,10 +50,13 @@
         </button>
         <div id="dialogOverlay" class="dialog-overlay">
           <div class="dialog-box">
-            <input type="text" id="subjectInput" placeholder="Enter subject name" />
+            <div class="input-and-error">
+              <input type="text" id="subjectInput" placeholder="Enter subject name" />
+              <p id="subject-error"></p>
+            </div>
             <div class="dialog-buttons">
               <button id="cancel-btn" onclick="closeAddSubjectDialog()">Cancel</button>
-              <button id="add-btn">Add</button>
+              <button id="add-btn" onclick="addCustomSubject()">Add</button>
             </div>
           </div>
         </div>
