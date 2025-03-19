@@ -5,5 +5,9 @@ const subjectErrorEmpty = 'Subject name cannot be empty.';
 const subjectErrorLong = 'Subject name is too long.';
 const validationSubjectExceed = 'You can only select a maximum of 5 subjects.';
 
+window.mainUserPage = mainUserPage;
+window.mainQnAPage = mainQnAPage;
+window.mainResultPage = mainResultPage;
+
 // export used by js file not by html file
 export { subjectErrorEmpty, subjectErrorLong, validationSubjectExceed };
