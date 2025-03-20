@@ -14,7 +14,7 @@ Made with ❤️ using vanilla js, html and css.
 
 2. Install dependencies
 
-   > Note: Node version 18 or above is required
+   > Note: Node version 18 or above is required and is not necessary for running the project
 
    ```bash
    npm install
