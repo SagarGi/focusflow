@@ -76,3 +76,24 @@ window.selectOrDisselectSubjects = selectOrDisselectSubjects;
 window.showAddSubjectDialog = showAddSubjectDialog;
 window.closeAddSubjectDialog = closeAddSubjectDialog;
 window.addCustomSubject = addCustomSubject;
+window.showNeedHelpDialog = showNeedHelpDialog;  // Added to window object
+window.closeNeedHelpDialog = closeNeedHelpDialog;  // Added to window object
+
+// Function to show the modal
+export function showNeedHelpDialog() {
+    document.getElementById("NHModal").style.display = "block";
+}
+
+// Function to close the modal
+export function closeNeedHelpDialog() {
+    document.getElementById("NHModal").style.display = "none";
+}
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+    const modal = document.getElementById("NHModal");
+    if (event.target === modal) {
+        closeNeedHelpDialog();
+    }
+};
+

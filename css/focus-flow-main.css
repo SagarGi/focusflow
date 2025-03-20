@@ -210,3 +210,87 @@ header {
     transform: translateY(-8px);
   }
 }
+
+/* Modal background */
+.need-help-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal content */
+.modal {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 40%;
+    text-align: center;
+    position: relative;
+}
+
+/* Modal container */
+.modal-container {
+  display: block;
+  background-color: #e7e7e7;
+  color: #757575;
+  text-align: left;
+  font-size: 12px;
+  max-height: 300px;
+  height: 300px;
+  border-radius: 5px;
+  margin-top: 35px;
+}
+
+/* Paragraph styling */
+.modal-container p {
+  padding: 20px 10px 0px 20px;
+}
+
+/* Ordered list styling */
+.modal-container ol {
+  padding-left: 20px;
+  padding-right:10px;
+  list-style-position: inside;
+}
+
+/* List item styling */
+.modal-container ol li {
+  margin-bottom: 8px;
+}
+
+/* Strong tag styling for list titles */
+.modal-container strong {
+  font-weight: bold;
+}
+
+/* Tile */
+.need-help a{
+  text-decoration: none;
+}
+.need-help-modal .need-help{
+  margin: 0;
+} 
+
+.need-help-modal .need, .need-help-modal .help {
+  float: left;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close:hover {
+    color: black;
+}
