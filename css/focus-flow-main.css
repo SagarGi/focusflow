@@ -226,12 +226,13 @@ header {
 /* Modal content */
 .modal {
     background-color: white;
-    margin: 10% auto;
+    margin: 12% auto;
     padding: 20px;
     border-radius: 8px;
     width: 40%;
     text-align: center;
     position: relative;
+    height: 390px;
 }
 
 /* Modal container */
@@ -281,6 +282,10 @@ header {
   float: left;
 }
 
+.need-help-modal .help {
+    margin-left: 5px;
+}
+
 /* Close button */
 .close {
     position: absolute;
@@ -293,4 +298,21 @@ header {
 
 .close:hover {
     color: black;
+}
+
+.btn-close {
+  display: block; /* Ensures it takes full width if needed */
+  margin: 15px auto 0; /* Centers the button horizontally with a 5px gap from .modal-container */
+  background-color: #38a8db;
+  color: #fff;
+  border: none;
+  padding: 12px 60px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px; /* Adds rounded corners */
+  text-align: center;
+}
+
+.btn-close:hover {
+  background-color: #000;
 }
