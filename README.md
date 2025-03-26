@@ -1,6 +1,6 @@
 # Description
 
-This is a simple project done as a part of college assesment by the student of University of West London in order to understnd Agile Scrum Methodology. <br><br>
+This is a simple project done as a part of college assesment by the student of University of West London in order to understand Agile Scrum Methodology. <br><br>
 Made with ❤️ using vanilla js, html and css.
 
 # Development setup
@@ -27,5 +27,3 @@ Made with ❤️ using vanilla js, html and css.
    ```bash
    http://localhost:5500/index.html
    ```
-
-   > else open with google chrome or any other web browser
