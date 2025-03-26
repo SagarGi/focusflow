@@ -9,13 +9,11 @@ body {
   margin: 0;
 }
 
-/* Common Containers */
 .container,
 .wrapper {
   max-width: 600px;
 }
 
-/* Common Typography */
 .logo,
 header {
   font-family: Courgette, cursive;
@@ -31,7 +29,6 @@ header {
   color: #38a8db;
 }
 
-/* Buttons */
 button {
   border: none;
   cursor: pointer;
@@ -58,7 +55,6 @@ button {
   color: #000;
 }
 
-/* Dialog Box */
 .dialog-overlay {
   position: fixed;
   top: 0;
@@ -78,16 +74,4 @@ button {
   text-align: center;
   box-shadow: 0 4px 10px rgb(0 0 0 / 20%);
   width: 250px;
-}
-
-/* Animations */
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-8px);
-  }
 }

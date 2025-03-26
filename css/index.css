@@ -9,6 +9,14 @@
   margin-bottom: 50px;
 }
 
+.start-btn {
+  border: none;
+  padding: 18px 25px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .caption-description {
   font-size: 14.5px;
   color: #000;
