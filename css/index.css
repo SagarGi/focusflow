@@ -1,13 +1,4 @@
-body {
-  font-family: Roboto-Mono, monospace;
-  background-color: #fff;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
+@import url('./global.css');
 
 .container {
   max-width: 600px;
@@ -15,16 +6,15 @@ body {
 
 .logo {
   font-size: 60px;
-  font-family: Courgette, cursive;
   margin-bottom: 50px;
 }
 
-.focus {
-  color: #000;
-}
-
-.flow {
-  color: #38a8db;
+.start-btn {
+  border: none;
+  padding: 18px 25px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .caption-description {
@@ -32,19 +22,4 @@ body {
   color: #000;
   line-height: 1.6;
   margin: 0 auto 40px;
-}
-
-.start-btn {
-  background-color: #38a8db;
-  color: #fff;
-  border: none;
-  padding: 18px 25px;
-  font-size: 14px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: Roboto-Mono, monospace;
-}
-
-.start-btn:hover {
-  background-color: #2a87b9;
 }
