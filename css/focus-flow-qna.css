@@ -23,7 +23,7 @@ header {
 .choose-subject,
 .question {
   text-align: left;
-  padding-top: 25px;
+  padding-top: 35px;
   padding-bottom: 8px;
   font-size: 14px;
 }
@@ -52,7 +52,7 @@ header {
 
 .selected-subjects-qna button.selected {
   background-color: #3fa9f5;
-  color: white;
+  color: rgb(255 255 255);
   border-color: #3fa9f5;
   padding: 10px;
 }
@@ -74,8 +74,8 @@ header {
 }
 
 .option:hover {
-  background-color: #000000;
-  color: white;
+  background-color: #000;
+  color: rgb(255 255 255);
 }
 
 .back-button,
@@ -87,12 +87,14 @@ header {
   cursor: pointer;
   border-radius: 5px;
   font-family: Roboto-Mono, monospace;
-  background-color: #000000;
-  color: white;
+  background-color: #000;
+  color: rgb(255 255 255);
 }
+
 .button-wrapper {
   display: flex;
 }
+
 .result-button {
   display: none;
   background-color: #a10505;
@@ -103,5 +105,5 @@ header {
 }
 
 .result-button:hover {
-  background-color: #000000;
+  background-color: #000;
 }

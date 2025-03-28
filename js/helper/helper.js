@@ -15,7 +15,18 @@ export function getSeletedSubjects() {
   return subjects ? JSON.parse(subjects) : [];
 }
 
+export function setSubjectResult(result) {
+  sessionStorage.setItem('result', JSON.stringify(result));
+}
+
+export function getSubjectResult() {
+  let result = sessionStorage.getItem('result');
+  return result ? JSON.parse(result) : {};
+}
+
 window.navigateTo = navigateTo;
 window.getNoOfChildren = getNoOfChildren;
 window.saveSeletedSubjects = saveSeletedSubjects;
 window.getSeletedSubjects = getSeletedSubjects;
+window.setSubjectResult = setSubjectResult;
+window.getSubjectResult = getSubjectResult;

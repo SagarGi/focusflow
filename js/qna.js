@@ -1,4 +1,4 @@
-import { getSeletedSubjects } from '../js/helper/helper.js';
+import { getSeletedSubjects, setSubjectResult } from '../js/helper/helper.js';
 
 let choosenSubjects = getSeletedSubjects();
 const totalNoOfChoosenSubjects = choosenSubjects.length;
@@ -8,17 +8,16 @@ let subjectIteratorEnd = subjectIteratorStart + 1;
 
 export function displaySelectedSubjects() {
   let subjects = getSeletedSubjects();
-  console.log('These subjects are seleted:' + subjects);
   let selectedSubjectWrapper = document.querySelector('.selected-subjects-qna');
   if (selectedSubjectWrapper) {
     for (let i = 0; i < subjects.length; i++) {
       let subjectButton = document.createElement('button');
       subjectButton.innerText = subjects[i];
-      if (i == 0) {
+      if (i === 0) {
         subjectButton.className = 'selected';
         document.querySelector('#firstOption').innerText = subjects[i];
       }
-      if (i == 1) {
+      if (i === 1) {
         subjectButton.className = 'selected';
         document.querySelector('#secondOption').innerText = subjects[i];
       }
@@ -30,40 +29,45 @@ export function displaySelectedSubjects() {
 }
 
 export function selectQuestionsSubject(node) {
-  if (subjectIteratorStart > totalNoOfChoosenSubjects - 2) {
-    // at this point all subjects are selected
-    console.log(subjectVsQuestionCountForResult);
-    return;
-  }
-  const hardSubjectChoosen = node.innerText;
-  if (subjectVsQuestionCountForResult[hardSubjectChoosen]) {
-    subjectVsQuestionCountForResult[hardSubjectChoosen]++;
-  } else {
-    subjectVsQuestionCountForResult[hardSubjectChoosen] = 1;
+  // Update subject question count
+  const selectedSubject = node.innerText;
+  subjectVsQuestionCountForResult[selectedSubject] =
+    (subjectVsQuestionCountForResult[selectedSubject] || 0) + 1;
+
+  // Get all subject buttons
+  const selectedSubjectWrapper = document.querySelectorAll('.selected-subjects-qna button');
+
+  // Remove highlight from previous subjects
+  if (subjectIteratorEnd < selectedSubjectWrapper.length) {
+    selectedSubjectWrapper[subjectIteratorEnd].classList.remove('selected');
   }
 
-  // change the subject selection and also the subject names in the question bar
-  let selectedSubjectWrapper = document.querySelectorAll('.selected-subjects-qna button');
-  // remove the highlight from the previous subject
-  selectedSubjectWrapper[subjectIteratorEnd].classList.remove('selected');
   subjectIteratorEnd++;
+
   if (subjectIteratorEnd > totalNoOfChoosenSubjects - 1) {
-    // remove the highlight from the previous subject
     selectedSubjectWrapper[subjectIteratorStart].classList.remove('selected');
     subjectIteratorStart++;
-    if (subjectIteratorStart > totalNoOfChoosenSubjects - 2) {
-      // at this point all subjects are selected
-      console.log(subjectVsQuestionCountForResult);
-      document.querySelector('#firstOption').disabled = true;
-      document.querySelector('#secondOption').disabled = true;
-      document.querySelector('.result-button').style.display = 'flex';
-      return;
-    }
-    selectedSubjectWrapper[subjectIteratorStart].className = 'selected';
     subjectIteratorEnd = subjectIteratorStart + 1;
   }
-  // add highlight to the new subject
-  selectedSubjectWrapper[subjectIteratorEnd].className = 'selected';
+
+  // Check if all subjects are selected
+  if (subjectIteratorStart > totalNoOfChoosenSubjects - 2) {
+    document.querySelector('#firstOption').disabled = true;
+    document.querySelector('#secondOption').disabled = true;
+    document.querySelector('#firstOption').style.cursor = 'default';
+    document.querySelector('#secondOption').style.cursor = 'default';
+    document.querySelector('.result-button').style.display = 'flex';
+
+    // save the result data in the session storage
+    setSubjectResult(subjectVsQuestionCountForResult);
+    return;
+  }
+
+  // Highlight the new subjects
+  selectedSubjectWrapper[subjectIteratorStart].classList.add('selected');
+  selectedSubjectWrapper[subjectIteratorEnd].classList.add('selected');
+
+  // Update the question bar text
   document.querySelector('#firstOption').innerText =
     selectedSubjectWrapper[subjectIteratorStart].innerText;
   document.querySelector('#secondOption').innerText =
