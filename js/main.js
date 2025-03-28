@@ -1,4 +1,4 @@
-import { getNoOfChildren, navigateTo } from '../js/helper/helper.js';
+import { getNoOfChildren, navigateTo, saveSelectedSubjects } from '../js/helper/helper.js';
 import {
   subjectErrorEmpty,
   subjectErrorLong,
@@ -80,7 +80,7 @@ export function letsBeginFocusFlow() {
   selectedSubjects.forEach((subject) => {
     selectedSubjectNames.push(subject.textContent);
   });
-  saveSeletedSubjects(selectedSubjectNames);
+  saveSelectedSubjects(selectedSubjectNames);
   // navigate to the next page
   navigateTo(mainQnAPage);
 }

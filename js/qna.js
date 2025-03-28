@@ -1,30 +1,29 @@
-import { getSeletedSubjects, setSubjectResult } from '../js/helper/helper.js';
+import { getSelectedSubjects, setSubjectResult } from '../js/helper/helper.js';
 
-let choosenSubjects = getSeletedSubjects();
-const totalNoOfChoosenSubjects = choosenSubjects.length;
+let chosenSubjects = getSelectedSubjects();
+const totalNoOfChosenSubjects = chosenSubjects.length;
 let subjectVsQuestionCountForResult = {};
 let subjectIteratorStart = 0;
 let subjectIteratorEnd = subjectIteratorStart + 1;
 
 export function displaySelectedSubjects() {
-  let subjects = getSeletedSubjects();
   let selectedSubjectWrapper = document.querySelector('.selected-subjects-qna');
   if (selectedSubjectWrapper) {
-    for (let i = 0; i < subjects.length; i++) {
+    for (let i = 0; i < chosenSubjects.length; i++) {
       let subjectButton = document.createElement('button');
-      subjectButton.innerText = subjects[i];
+      subjectButton.innerText = chosenSubjects[i];
       if (i === 0) {
         subjectButton.className = 'selected';
-        document.querySelector('#firstOption').innerText = subjects[i];
+        document.querySelector('#firstOption').innerText = chosenSubjects[i];
       }
       if (i === 1) {
         subjectButton.className = 'selected';
-        document.querySelector('#secondOption').innerText = subjects[i];
+        document.querySelector('#secondOption').innerText = chosenSubjects[i];
       }
       selectedSubjectWrapper.appendChild(subjectButton);
     }
   } else {
-    console.error('Selected subjects wrapper not found in the DOM.');
+    console.error('Selected chosenSubjects wrapper not found in the DOM.');
   }
 }
 
@@ -44,14 +43,14 @@ export function selectQuestionsSubject(node) {
 
   subjectIteratorEnd++;
 
-  if (subjectIteratorEnd > totalNoOfChoosenSubjects - 1) {
+  if (subjectIteratorEnd > totalNoOfChosenSubjects - 1) {
     selectedSubjectWrapper[subjectIteratorStart].classList.remove('selected');
     subjectIteratorStart++;
     subjectIteratorEnd = subjectIteratorStart + 1;
   }
 
   // Check if all subjects are selected
-  if (subjectIteratorStart > totalNoOfChoosenSubjects - 2) {
+  if (subjectIteratorStart > totalNoOfChosenSubjects - 2) {
     document.querySelector('#firstOption').disabled = true;
     document.querySelector('#secondOption').disabled = true;
     document.querySelector('#firstOption').style.cursor = 'default';

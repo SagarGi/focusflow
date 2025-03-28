@@ -6,11 +6,11 @@ export function getNoOfChildren(node) {
   return node.children.length;
 }
 
-export function saveSeletedSubjects(subjects) {
+export function saveSelectedSubjects(subjects) {
   sessionStorage.setItem('subjects', JSON.stringify(subjects));
 }
 
-export function getSeletedSubjects() {
+export function getSelectedSubjects() {
   let subjects = sessionStorage.getItem('subjects');
   return subjects ? JSON.parse(subjects) : [];
 }
@@ -26,7 +26,7 @@ export function getSubjectResult() {
 
 window.navigateTo = navigateTo;
 window.getNoOfChildren = getNoOfChildren;
-window.saveSeletedSubjects = saveSeletedSubjects;
-window.getSeletedSubjects = getSeletedSubjects;
+window.saveSelectedSubjects = saveSelectedSubjects;
+window.getSelectedSubjects = getSelectedSubjects;
 window.setSubjectResult = setSubjectResult;
 window.getSubjectResult = getSubjectResult;
