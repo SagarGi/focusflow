@@ -13,6 +13,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <link rel="stylesheet" href="../css/focus-flow-qna.css" />
+    <script type="module" src="../js/qna.js" defer></script>
   </head>
   <body>
     <div class="wrapper">
@@ -22,22 +23,14 @@
 
       <div class="subjects-qna-wrapper">
         <p class="choose-subject">Chosen subjects:</p>
-        <div class="selected-subjects-qna">
-          <button class="selected">Mathematics</button>
-          <button class="selected">English</button>
-          <button>Science</button>
-          <button>Computer</button>
-          <button>Physics</button>
-          <button>Chemistry</button>
-          <button>Boilogy</button>
-        </div>
+        <div class="selected-subjects-qna"></div>
       </div>
 
       <p class="question">Which one of the following do you find harder?</p>
       <div class="option-container">
-        <button class="option">Mathematics</button>
+        <button id="firstOption" class="option" onclick="selectQuestionsSubject()"></button>
         <p>vs</p>
-        <button class="option">English</button>
+        <button id="secondOption" class="option" onclick="selectQuestionsSubject()"></button>
       </div>
 
       <button class="back-button">Back</button>

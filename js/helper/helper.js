@@ -6,11 +6,11 @@ export function getNoOfChildren(node) {
   return node.children.length;
 }
 
-function saveSeletedSubjects(subjects) {
+export function saveSeletedSubjects(subjects) {
   sessionStorage.setItem('subjects', JSON.stringify(subjects));
 }
 
-function getSeletedSubjects() {
+export function getSeletedSubjects() {
   let subjects = sessionStorage.getItem('subjects');
   return subjects ? JSON.parse(subjects) : [];
 }
