@@ -28,12 +28,14 @@
 
       <p class="question">Which one of the following do you find harder?</p>
       <div class="option-container">
-        <button id="firstOption" class="option" onclick="selectQuestionsSubject()"></button>
+        <button id="firstOption" class="option" onclick="selectQuestionsSubject(this)"></button>
         <p>vs</p>
-        <button id="secondOption" class="option" onclick="selectQuestionsSubject()"></button>
+        <button id="secondOption" class="option" onclick="selectQuestionsSubject(this)"></button>
       </div>
-
-      <button class="back-button">Back</button>
+      <div class="button-wrapper">
+        <button class="back-button">Back</button>
+        <button class="result-button">Result</button>
+      </div>
     </div>
   </body>
 </html>

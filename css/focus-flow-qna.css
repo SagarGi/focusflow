@@ -20,7 +20,8 @@ header {
   margin-top: 20px;
 }
 
-.choose-subject, .question {
+.choose-subject,
+.question {
   text-align: left;
   padding-top: 25px;
   padding-bottom: 8px;
@@ -72,18 +73,35 @@ header {
   font-family: Roboto-Mono, monospace;
 }
 
-.back-button {
-  margin-top: 60px;
+.option:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.back-button,
+.result-button {
+  margin-top: 80px;
   margin-left: 25px;
   padding: 15px 50px;
   background: none;
   cursor: pointer;
   border-radius: 5px;
   font-family: Roboto-Mono, monospace;
-  background-color: #3fa9f5;
+  background-color: #000000;
   color: white;
+}
+.button-wrapper {
+  display: flex;
+}
+.result-button {
+  display: none;
+  background-color: #a10505;
 }
 
 .back-button:hover {
+  background-color: #a10505;
+}
+
+.result-button:hover {
   background-color: #000000;
 }
