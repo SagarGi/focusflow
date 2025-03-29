@@ -1,5 +1,6 @@
 export function navigateTo(pageName) {
-  window.location.href = `pages/${pageName}.html`;
+  const origin = window.location.origin; // Includes protocol (http/https) + host
+  window.location.href = `${origin}/pages/${pageName}.html`;
 }
 
 export function getNoOfChildren(node) {
