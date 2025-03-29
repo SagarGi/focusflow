@@ -221,7 +221,7 @@ header {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 50%);
     overflow: auto; /* Ensures scrollability if content overflows */
 }
 
@@ -314,7 +314,7 @@ header {
 }
 
 .close:hover {
-    color: black;
+    color: #000;
 }
 
 .btn-close {
@@ -372,4 +372,5 @@ header {
 }
 
 /* End Modal Styling */
+
 
