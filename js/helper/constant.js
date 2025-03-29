@@ -10,4 +10,11 @@ window.mainQnAPage = mainQnAPage;
 window.mainResultPage = mainResultPage;
 
 // export used by js file not by html file
-export { subjectErrorEmpty, subjectErrorLong, validationSubjectExceed };
+export {
+  subjectErrorEmpty,
+  subjectErrorLong,
+  validationSubjectExceed,
+  mainQnAPage,
+  mainResultPage,
+  mainUserPage,
+};

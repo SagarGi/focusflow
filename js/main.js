@@ -1,8 +1,9 @@
-import { getNoOfChildren } from '../js/helper/helper.js';
+import { getNoOfChildren, navigateTo, saveSelectedSubjects } from '../js/helper/helper.js';
 import {
   subjectErrorEmpty,
   subjectErrorLong,
   validationSubjectExceed,
+  mainQnAPage,
 } from '../js/helper/constant.js';
 
 export function selectOrDisselectSubjects(node, type = null) {
@@ -72,7 +73,20 @@ export function addCustomSubject() {
   closeAddSubjectDialog();
 }
 
+export function letsBeginFocusFlow() {
+  // we need to get all the selected subjects and save them in the session storage
+  const selectedSubjects = document.querySelectorAll('.subject-selected');
+  const selectedSubjectNames = [];
+  selectedSubjects.forEach((subject) => {
+    selectedSubjectNames.push(subject.textContent);
+  });
+  saveSelectedSubjects(selectedSubjectNames);
+  // navigate to the next page
+  navigateTo(mainQnAPage);
+}
+
 window.selectOrDisselectSubjects = selectOrDisselectSubjects;
 window.showAddSubjectDialog = showAddSubjectDialog;
 window.closeAddSubjectDialog = closeAddSubjectDialog;
 window.addCustomSubject = addCustomSubject;
+window.letsBeginFocusFlow = letsBeginFocusFlow;
