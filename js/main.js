@@ -80,12 +80,14 @@ export function closeNeedHelpDialog() {
     document.getElementById("need-help-modal").style.display = "none";
 }
 
-window.selectOrDisselectSubjects = selectOrDisselectSubjects;
-window.showAddSubjectDialog = showAddSubjectDialog;
-window.closeAddSubjectDialog = closeAddSubjectDialog;
-window.addCustomSubject = addCustomSubject;
-window.showNeedHelpDialog = showNeedHelpDialog;  // Added to window object
-window.closeNeedHelpDialog = closeNeedHelpDialog;  // Added to window object
+// Open help modal on first visit
+document.addEventListener("DOMContentLoaded", function () {
+  if (!localStorage.getItem("hasSeenHelpModal")) {
+    showNeedHelpDialog();
+    localStorage.setItem("hasSeenHelpModal", "true");
+  }
+});
+
 // Close modal when clicking outside of it
 window.onclick = function(event) {
     const modal = document.getElementById("need-help-modal");
@@ -93,4 +95,12 @@ window.onclick = function(event) {
         closeNeedHelpDialog();
     }
 };
+
+window.selectOrDisselectSubjects = selectOrDisselectSubjects;
+window.showAddSubjectDialog = showAddSubjectDialog;
+window.closeAddSubjectDialog = closeAddSubjectDialog;
+window.addCustomSubject = addCustomSubject;
+window.showNeedHelpDialog = showNeedHelpDialog;  // Added to window object
+window.closeNeedHelpDialog = closeNeedHelpDialog;  // Added to window object
+
 
