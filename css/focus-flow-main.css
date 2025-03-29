@@ -242,13 +242,13 @@ header {
     display: block;
     background-color: #F9F9F9;
     color: #757575;
-    text-align: justify; 
+    text-align: justify;
     font-size: 12px;
     height: auto;
     border-radius: 5px;
     margin-top: 35px;
     padding: 20px;
-    overflow-y: auto; 
+    overflow-y: auto;
 }
 
 .modal-container b {
@@ -263,17 +263,17 @@ header {
 .modal-container ol {
     padding-left: 12px;
     padding-right: 10px;
-    list-style: none; 
+    list-style: none;
     counter-reset: list-counter;
 }
 
 .modal-container ol li {
     font-size: 14px;
     margin-bottom: 5px;
-    padding-left: 25px; 
-    text-indent: 0px; 
+    padding-left: 25px;
+    text-indent: 0px;
     position: relative;
-    line-height: 1.5; 
+    line-height: 1.5;
 }
 
 .modal-container ol li::before {
@@ -372,3 +372,4 @@ header {
 }
 
 /* End Modal Styling */
+
