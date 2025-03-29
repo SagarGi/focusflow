@@ -5,6 +5,10 @@ const totalNoOfChosenSubjects = chosenSubjects.length;
 let subjectVsQuestionCountForResult = {};
 let subjectIteratorStart = 0;
 let subjectIteratorEnd = subjectIteratorStart + 1;
+// set initial values of all the subjects as zero for result
+chosenSubjects.forEach((subject) => {
+  subjectVsQuestionCountForResult[subject] = 0;
+});
 
 export function displaySelectedSubjects() {
   let selectedSubjectWrapper = document.querySelector('.selected-subjects-qna');
