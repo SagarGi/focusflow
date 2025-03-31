@@ -25,7 +25,25 @@
     <div class="wrapper">
       <header>
         <h1 class="logo"><span class="focus">focus</span><span class="flow">flow</span></h1>
-        <p class="need-help"><span class="need">Need</span><span class="help"> help?</span></p>
+        <p class="need-help"><a href="javascript:void()" onclick="showNeedHelpDialog()"> <span class="need">Need</span><span class="help"> help?</span></a></p>
+        <!-- Modal Structure -->
+        <div id="need-help-modal" class="need-help-modal">
+            <div class="modal">
+                <p class="need-help"><span class="close" onclick="closeNeedHelpDialog()">&times;</span></p>
+                <span class="help"> focus</span><span class="need">flow</span>
+                <div class="modal-container">
+                    <p><b>FocusFlow helps you choose and prioritize subjects for your exam preparation. Here’s how you can use it:</b></p>
+                    <ol>
+                      <li><strong>Select Your Current Subjects:</strong> Choose your current subjects from the list (you can add up to five main subjects).</li>
+                      <li><strong>Manually Add Subjects:</strong> If your subject isn’t listed by default, you can manually add it.</li>
+                      <li><strong>Start Prioritizing Your Subjects:</strong> Once selected, start prioritizing your subjects based on importance.</li>
+                      <li><strong>Answer Questions to Determine Importance:</strong> Answer the provided questions to determine the relative importance of each subject.</li>
+                      <li><strong>Receive a Summary:</strong> At the end, you’ll receive a summary highlighting the subjects you should focus on.</li>
+                    </ol>
+                </div>
+                <button class="btn-close" onclick="closeNeedHelpDialog()">Close</button>
+            </div>
+        </div>
       </header>
 
       <div class="instruction-box">
