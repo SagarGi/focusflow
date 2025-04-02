@@ -82,7 +82,7 @@ export function letsBeginFocusFlow() {
     errorMessage.style.display = 'block';
     return;
   } else {
-      errorMessage.style.display = 'none';
+    errorMessage.style.display = 'none';
   }
   const selectedSubjectNames = [];
   selectedSubjects.forEach((subject) => {
