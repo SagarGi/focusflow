@@ -1,6 +1,13 @@
 export function navigateTo(pageName) {
   const origin = window.location.origin; // Includes protocol (http/https) + host
-  window.location.href = `${origin}/pages/${pageName}.html`;
+  let pathname = window.location.pathname; // Includes path
+  if (pathname.includes('pages')) {
+    const tempPath = pathname.slice(0, pathname.lastIndexOf('/') + 1);
+    pathname = tempPath + pageName + '.html';
+    window.location.href = `${origin}${pathname}`;
+  } else {
+    window.location.href = `${origin}/pages/${pageName}.html`;
+  }
 }
 
 export function getNoOfChildren(node) {
