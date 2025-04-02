@@ -6,7 +6,9 @@ export function navigateTo(pageName) {
     pathname = tempPath + pageName + '.html';
     window.location.href = `${origin}${pathname}`;
   } else {
-    window.location.href = `${origin}/pages/${pageName}.html`;
+    // remove last section
+    const tempUrl = window.location.href.slice(0, window.location.href.lastIndexOf('/') + 1);
+    window.location.href = tempUrl + `pages/${pageName}.html`;
   }
 }
 
