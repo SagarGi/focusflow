@@ -84,7 +84,7 @@ export function closeNeedHelpDialog() {
 document.addEventListener("DOMContentLoaded", function () {
   if (!localStorage.getItem("hasSeenHelpModal")) {
     showNeedHelpDialog();
-    localStorage.setItem("hasSeenHelpModal", "true");
+    sessionStorage.setItem("hasSeenHelpModal", "true");
   }
 });
 
