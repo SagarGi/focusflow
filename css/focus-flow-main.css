@@ -134,6 +134,12 @@ header {
   background-color: #000;
 }
 
+#subject-selection-error {
+  display: none;
+  text-align: center;
+  color: rgb(238 42 42);
+}
+
 /* for animation bounce
  */
 .begin-text {
