@@ -85,8 +85,26 @@ export function letsBeginFocusFlow() {
   navigateTo(mainQnAPage);
 }
 
+export function showNeedHelpDialog() {
+  document.getElementById('need-help-modal').style.display = 'flex';
+}
+
+export function closeNeedHelpDialog() {
+  document.getElementById('need-help-modal').style.display = 'none';
+}
+
+// Close modal when clicking outside of it
+window.onclick = function (event) {
+  const modal = document.getElementById('need-help-modal');
+  if (event.target === modal) {
+    closeNeedHelpDialog();
+  }
+};
+
 window.selectOrDisselectSubjects = selectOrDisselectSubjects;
 window.showAddSubjectDialog = showAddSubjectDialog;
 window.closeAddSubjectDialog = closeAddSubjectDialog;
 window.addCustomSubject = addCustomSubject;
 window.letsBeginFocusFlow = letsBeginFocusFlow;
+window.showNeedHelpDialog = showNeedHelpDialog;
+window.closeNeedHelpDialog = closeNeedHelpDialog;
