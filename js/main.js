@@ -86,7 +86,7 @@ export function letsBeginFocusFlow() {
 }
 
 export function showNeedHelpDialog() {
-    document.getElementById("need-help-modal").style.display = "block";
+    document.getElementById("need-help-modal").style.display = "flex";
 }
 
 export function closeNeedHelpDialog() {

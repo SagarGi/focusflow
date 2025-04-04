@@ -159,7 +159,7 @@ header {
 .need-help-modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 999;
     left: 0;
     top: 0;
     width: 100%;
@@ -172,14 +172,10 @@ header {
 
 .modal {
     background-color: #fff;
-    margin: 3% auto;
     padding: 50px;
     border-radius: 8px;
-    width: 40%;
+    width: 35%;
     text-align: center;
-    position: relative;
-    max-width: 600px;
-    height: auto;
 }
 
 .modal-container {
@@ -193,7 +189,7 @@ header {
   padding: 10px;
   overflow-y: auto;
   flex-grow: 1;
-  max-height: 60vh;
+  height: 300px;
 }
 
 .modal-container b {
@@ -218,7 +214,6 @@ header {
     padding-left: 25px;
     text-indent: 0px;
     position: relative;
-    line-height: 1.5;
 }
 
 .modal-container ol li::before {
