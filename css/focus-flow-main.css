@@ -175,11 +175,12 @@ header {
     margin: 2% auto;
     padding: 50px;
     border-radius: 8px;
-    width: 40%;
+    width: 70%;
     text-align: center;
     position: relative;
-    max-width: 600px;
+    max-width: 500px;
     height: auto;
+    max-height: 500px;
 }
 
 .modal-container {
@@ -188,12 +189,13 @@ header {
     background-color: #F9F9F9;
     color: #757575;
     text-align: justify;
-    font-size: 12px;
+    font-size: 11px;
     height: auto;
     border-radius: 5px;
-    margin-top: 15px;
-    padding: 20px;
+    margin-top: 5px;
+    padding: 10px;
     overflow-y: auto;
+    max-height: 400px;
 }
 
 .modal-container b {
