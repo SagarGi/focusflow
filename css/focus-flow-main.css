@@ -157,45 +157,45 @@ header {
 
 /* Start Modal Styling */
 .need-help-modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0 0 0 / 50%);;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal {
-    background-color: #fff;
-    margin: 2% auto;
-    padding: 50px;
-    border-radius: 8px;
-    width: 70%;
-    text-align: center;
-    position: relative;
-    max-width: 500px;
-    height: auto;
-    max-height: 500px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+  max-height: 80vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal-container {
-    font-family: Roboto-Mono, monospace;
-    display: block;
-    background-color: #F9F9F9;
-    color: #757575;
-    text-align: justify;
-    font-size: 11px;
-    height: auto;
-    border-radius: 5px;
-    margin-top: 5px;
-    padding: 10px;
-    overflow-y: auto;
-    max-height: 400px;
+  font-family: Roboto-Mono, monospace;
+  background-color: #F9F9F9;
+  color: #757575;
+  text-align: justify;
+  font-size: 12px;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 10px;
+  overflow-y: auto;
+  flex-grow: 1;
+  max-height: 60vh;
 }
 
 .modal-container b {
@@ -293,40 +293,41 @@ header {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-    .modal {
-        width: 85%;
-        padding: 30px;
-    }
+  .modal {
+      width: 90%;
+      padding: 30px;
+  }
 
-    .modal-container {
-        font-size: 14px;
-        padding: 15px;
-        max-height: 400px;
-    }
+  .modal-container {
+      font-size: 14px;
+      padding: 10px;
+      max-height: 50vh;
+  }
 
-    .btn-close {
-        padding: 10px 40px;
-        font-size: 14px;
-    }
+  .btn-close {
+      padding: 10px 40px;
+      font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 480px) {
-    .modal {
-        width: 85%;
-        padding: 20px;
-    }
+  .modal {
+      width: 95%;
+      padding: 20px;
+  }
 
-    .modal-container {
-        font-size: 12px;
-        padding: 10px;
-        max-height: 300px;
-    }
+  .modal-container {
+      font-size: 12px;
+      padding: 10px;
+      max-height: 45vh;
+  }
 
-    .btn-close {
-        padding: 8px 30px;
-        font-size: 12px;
-    }
+  .btn-close {
+      padding: 8px 30px;
+      font-size: 12px;
+  }
 }
+
 
 /* End Modal Styling */
 
