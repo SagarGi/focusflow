@@ -76,6 +76,14 @@ export function addCustomSubject() {
 export function letsBeginFocusFlow() {
   // we need to get all the selected subjects and save them in the session storage
   const selectedSubjects = document.querySelectorAll('.subject-selected');
+  const errorMessage = document.getElementById('subject-selection-error');
+  // Validate the number of selected subjects
+  if (selectedSubjects.length < 2) {
+    errorMessage.style.display = 'block';
+    return;
+  } else {
+    errorMessage.style.display = 'none';
+  }
   const selectedSubjectNames = [];
   selectedSubjects.forEach((subject) => {
     selectedSubjectNames.push(subject.textContent);
