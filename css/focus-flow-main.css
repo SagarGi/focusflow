@@ -157,31 +157,29 @@ header {
 
 /* Start Modal Styling */
 .need-help-modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 50%);;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal {
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 8px;
-  width: 80%;
-  max-width: 500px;
-  text-align: center;
-  position: relative;
-  max-height: 80vh;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+    background-color: #fff;
+    margin: 3% auto;
+    padding: 50px;
+    border-radius: 8px;
+    width: 40%;
+    text-align: center;
+    position: relative;
+    max-width: 600px;
+    height: auto;
 }
 
 .modal-container {
@@ -200,7 +198,7 @@ header {
 
 .modal-container b {
     color: #000;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .modal-container p {
@@ -215,7 +213,7 @@ header {
 }
 
 .modal-container ol li {
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: 5px;
     padding-left: 25px;
     text-indent: 0px;
@@ -293,41 +291,40 @@ header {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-  .modal {
-      width: 90%;
-      padding: 30px;
-  }
+    .modal {
+        width: 85%;
+        padding: 30px;
+    }
 
-  .modal-container {
-      font-size: 14px;
-      padding: 10px;
-      max-height: 50vh;
-  }
+    .modal-container {
+        font-size: 14px;
+        padding: 15px;
+        max-height: 400px;
+    }
 
-  .btn-close {
-      padding: 10px 40px;
-      font-size: 14px;
-  }
+    .btn-close {
+        padding: 10px 40px;
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 480px) {
-  .modal {
-      width: 95%;
-      padding: 20px;
-  }
+    .modal {
+        width: 85%;
+        padding: 20px;
+    }
 
-  .modal-container {
-      font-size: 12px;
-      padding: 10px;
-      max-height: 45vh;
-  }
+    .modal-container {
+        font-size: 12px;
+        padding: 10px;
+        max-height: 300px;
+    }
 
-  .btn-close {
-      padding: 8px 30px;
-      font-size: 12px;
-  }
+    .btn-close {
+        padding: 8px 30px;
+        font-size: 12px;
+    }
 }
-
 
 /* End Modal Styling */
 
