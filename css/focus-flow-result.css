@@ -15,7 +15,7 @@ body {
 }
 
 header {
-  font-family: 'Courgette', cursive;
+  font-family: Courgette, cursive;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,13 +25,13 @@ header {
 
 .focus,
 .help {
-  font-family: 'Courgette', cursive;
+  font-family: Courgette, cursive;
   color: #000;
 }
 
 .flow,
 .need {
-  font-family: 'Courgette', cursive;
+  font-family: Courgette, cursive;
   color: #38a8db;
 }
 
@@ -69,7 +69,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #fff;
   font-weight: bold;
   font-size: 16px;
   box-sizing: border-box;
@@ -80,7 +80,7 @@ header {
   margin-left: 10px;
   font-size: 16px;
   font-weight: bold;
-  color: black;
+  color: #000;
   white-space: nowrap;
 }
 
