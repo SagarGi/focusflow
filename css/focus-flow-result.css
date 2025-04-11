@@ -93,7 +93,7 @@ header {
   cursor: pointer;
   border-radius: 5px;
   margin-top: 30px;
-  float:left;
+  float: left;
 }
 
 .exit-btn:hover {
