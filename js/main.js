@@ -101,6 +101,14 @@ export function closeNeedHelpDialog() {
   document.getElementById('need-help-modal').style.display = 'none';
 }
 
+// Open help modal on first visit
+document.addEventListener('DOMContentLoaded', function () {
+  if (!sessionStorage.getItem('hasSeenHelpModal')) {
+    showNeedHelpDialog();
+    sessionStorage.setItem('hasSeenHelpModal', 'true');
+  }
+});
+
 // Close modal when clicking outside of it
 window.onclick = function (event) {
   const modal = document.getElementById('need-help-modal');
