@@ -62,6 +62,10 @@ export function selectQuestionsSubject(node) {
     document.querySelector('#secondOption').style.cursor = 'default';
     document.querySelector('.result-button').style.display = 'flex';
 
+    // Disable hover effect
+    document.querySelector('#firstOption').style.pointerEvents = 'none';
+    document.querySelector('#secondOption').style.pointerEvents = 'none';
+
     // save the result data in the session storage
     setSubjectResult(subjectVsQuestionCountForResult);
     return;
