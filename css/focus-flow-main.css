@@ -54,6 +54,7 @@ header {
 .subject-selected {
   background-color: rgb(194 0 32);
   color: #fff;
+  margin-right: 10px;
 }
 
 .subject-selected:hover {
