@@ -4,14 +4,12 @@
   "description": "This is a simple project done as a part of college assesment by the student of University of West London in order to understnd Agile Scrum Methodology.",
   "main": "index.js",
   "scripts": {
-    "test-unit": "",
-    "test-e2e": "",
     "lint:js": "eslint './**/*.js' --ignore-pattern 'node_modules/**'",
     "style:lint:check": "stylelint **/*.css",
     "style:lint:fix": "stylelint '**/*.css' --fix",
     "format:check": "prettier --check .",
     "format:fix": "prettier --write .",
-    "test": "jest"
+    "test:unit": "jest --coverage"
   },
   "keywords": [],
   "author": "",
