@@ -181,6 +181,7 @@ header {
   border-radius: 8px;
   width: 35%;
   text-align: center;
+  position: relative;
 }
 
 .modal-container {
