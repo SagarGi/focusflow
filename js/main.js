@@ -102,10 +102,10 @@ export function closeNeedHelpDialog() {
 }
 
 // Open help modal on first visit
-document.addEventListener("DOMContentLoaded", function () {
-  if (!sessionStorage.getItem("hasSeenHelpModal")) {
+document.addEventListener('DOMContentLoaded', function () {
+  if (!sessionStorage.getItem('hasSeenHelpModal')) {
     showNeedHelpDialog();
-    sessionStorage.setItem("hasSeenHelpModal", "true");
+    sessionStorage.setItem('hasSeenHelpModal', 'true');
   }
 });
 
