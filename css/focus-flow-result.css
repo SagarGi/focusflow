@@ -18,31 +18,31 @@ header {
 
 #subject-list {
   margin-top: 10px;
-  display: flex; /* Use flexbox to align items */
-  flex-direction: column; /* Align bars vertically */
-  align-items: flex-start; /* Align the bars to the left */
-  width: 100%; /* Ensure the container spans the full width of the screen */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .subject-container {
-  display: flex; /* Use flexbox to align the bar and text side by side */
-  align-items: center; /* Vertically center the content */
-  margin-bottom: 10px; /* Space between each subject */
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .subject-container p {
-  font-size: 13px; /* Adjust font size for the subject name */
+  font-size: 13px;
   margin-left: 8px;
 }
 
 .bar {
-  margin-bottom: 10px; /* Space between bars */
-  height: 40px; /* Increase the height of each bar */
-  color: rgb(255 255 255); /* Set text color */
-  text-align: center; /* Center the text inside the bars */
-  line-height: 50px; /* Vertically center the text inside the bars */
-  padding: 0 10px; /* Optional: Add some padding for the text */
-  transition: width 0.3s ease; /* Smooth transition for width change */
+  margin-bottom: 10px;
+  height: 40px;
+  color: rgb(255 255 255);
+  text-align: center;
+  line-height: 50px;
+  padding: 0 10px;
+  transition: width 0.3s ease;
 }
 
 .subject,
