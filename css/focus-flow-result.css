@@ -1,0 +1,78 @@
+@import url('./global.css');
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: 20px;
+  max-height: 60px;
+}
+
+#subject-list {
+  margin-top: 10px;
+  display: flex; /* Use flexbox to align items */
+  flex-direction: column; /* Align bars vertically */
+  align-items: flex-start; /* Align the bars to the left */
+  width: 100%; /* Ensure the container spans the full width of the screen */
+}
+
+.subject-container {
+  display: flex; /* Use flexbox to align the bar and text side by side */
+  align-items: center; /* Vertically center the content */
+  margin-bottom: 10px; /* Space between each subject */
+}
+
+.subject-container p {
+  font-size: 13px; /* Adjust font size for the subject name */
+  margin-left: 8px;
+}
+
+.bar {
+  margin-bottom: 10px; /* Space between bars */
+  height: 40px; /* Increase the height of each bar */
+  color: rgb(255 255 255); /* Set text color */
+  text-align: center; /* Center the text inside the bars */
+  line-height: 50px; /* Vertically center the text inside the bars */
+  padding: 0 10px; /* Optional: Add some padding for the text */
+  transition: width 0.3s ease; /* Smooth transition for width change */
+}
+
+.subject,
+.priority {
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.subject {
+  color: rgb(0 0 0);
+  font-weight: normal;
+}
+
+.priority {
+  color: rgb(0 0 0);
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.exit-button {
+  margin-top: 30px;
+  background-color: #38a8db;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 6px;
+  color: rgb(255 255 255);
+  cursor: pointer;
+}
+
+.exit-button:hover {
+  background-color: #000;
+}

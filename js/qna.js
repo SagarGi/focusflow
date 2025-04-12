@@ -11,6 +11,7 @@ chosenSubjects.forEach((subject) => {
 });
 
 export function displaySelectedSubjects() {
+  console.log('Display selected subjects:', chosenSubjects);
   let selectedSubjectWrapper = document.querySelector('.selected-subjects-qna');
   if (selectedSubjectWrapper) {
     for (let i = 0; i < chosenSubjects.length; i++) {
