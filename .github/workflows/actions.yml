@@ -30,3 +30,6 @@ jobs:
 
       - name: javascript lint check
         run: npm run lint:js
+
+      - name: unit test
+        run: npm run test:unit
